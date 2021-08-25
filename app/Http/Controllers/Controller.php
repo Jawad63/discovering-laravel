@@ -10,4 +10,24 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+
+    public function home () {
+        return view('home');
+    }
+
+
+    public function laravelform() {
+        return view('hello');
+    }
+
+
+    public function postView()
+    {
+        dd(request()->input('Verou'));
+        return view('home');
+    }
+
 }
+
+

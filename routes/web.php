@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/greeting', function() {
-    return 'Hello World';
-});
+Route::get('/', [\App\Http\Controllers\Controller::class, 'home']);
+Route::post('/', [\App\Http\Controllers\Controller::class, 'postView']);
+Route::get('/laravel-form', [\App\Http\Controllers\Controller::class, 'laravelform']);
